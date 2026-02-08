@@ -6,6 +6,13 @@ pipeline {
     }
 
     stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main',
+                url: 'https://github.comrouchi-11/git-assignment>.git'
+            }
+        }
+
         stage('Compile Java') {
             steps {
                 bat '''
